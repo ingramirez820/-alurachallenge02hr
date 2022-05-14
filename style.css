@@ -1,0 +1,22 @@
+
+#ahorcado{
+  height: 212px;
+  width: 202px;
+  background-image: url('./hangman-game_pm-1024x212.png');
+}
+
+
+
+.titulo{
+  margin:0 auto;
+}
+.contenedor{
+  position: absolute;
+  width: 500px;
+  height: 300px;
+  background: rgb(94, 197, 85);
+}
+.output{
+  font-weight: bold;
+  font-size: 40px;
+}
