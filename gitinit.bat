@@ -1,3 +1,4 @@
+rem The "fatal: refusing to merge unrelated histories" error
 git init
 git branch -a
 pause
