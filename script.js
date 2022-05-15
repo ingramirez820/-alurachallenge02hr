@@ -5,16 +5,17 @@ String.prototype.replaceAt=function(index, character) {
 const palabras = ['melon','coco','kiwi','maiz','noni','papaya'];
 /**Obtenemos una palabra al azar */
 const palabra = palabras[Math.floor(Math.random()*palabras.length)];
-const palabraConGuiones = palabra.replace(/./g,"_ ");
+let palabraConGuiones = palabra.replace(/./g, "_ ");
 let contadorFallos=0;
 
-document.querySelector('#output').innerHTML=palabraConGuiones;
+document.querySelector('#salida').innerHTML=palabraConGuiones;
 document.querySelector('#calcular').addEventListener('click',()=>{
   const letra=document.querySelector('#letra').value;
   let haFallado=true;
   for(const i in palabra){
     if(letra==palabra[i]){
       palabraConGuiones=palabraConGuiones.replaceAt(i*2,letra);
+      document.querySelector('#letra').value='';
       haFallado=false;
     }
   }
@@ -23,7 +24,14 @@ document.querySelector('#calcular').addEventListener('click',()=>{
     document.querySelector('#ahorcado').style.backgroundPosition = -(200*contadorFallos)+'px 0';
     if(contadorFallos==5){
       alert("Perdiste el juego");
+    }else{
+      if(palabraConGuiones.indexOf('_')<0){
+        alert("Ganaste!!");
+      }
     }
   }
-  document.querySelector('#output').innerHTML=palabraConGuiones;
+  
+  document.querySelector('#salida').innerHTML=palabraConGuiones;
+  document.querySelector('#letra').value;
+  document.querySelector('#letra').focus();
 });

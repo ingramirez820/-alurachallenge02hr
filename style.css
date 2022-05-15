@@ -1,22 +1,38 @@
-
-#ahorcado{
-  height: 212px;
-  width: 202px;
-  background-image: url('./hangman-game_pm-1024x212.png');
+body{
+  background: rgb(216, 224, 227);
 }
-
-
-
+#ganador{
+  display: none;
+  height: 100vh;
+  align-items: center;
+  justify-items: center;
+  flex-direction: column;
+  font-size: 5rem;
+  position: fixed;
+  top: 0;left: 0;
+  background-color: #fff;
+}
+.container{
+  margin: auto;
+  width: 60%;
+  text-align: center;
+  background: rgb(210, 222, 226);
+  padding: 30px;
+}
 .titulo{
   margin:0 auto;
 }
-.contenedor{
-  position: absolute;
-  width: 500px;
-  height: 300px;
-  background: rgb(94, 197, 85);
-}
-.output{
+.salida{
   font-weight: bold;
   font-size: 40px;
 }
+.ahorcado{
+  height: 200px;
+  width: 160px;
+  background-image: url('./nvo_ahorcado-01.png');
+  background-size:cover;
+  margin: 0 auto;
+}
+
+
+
