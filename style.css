@@ -22,11 +22,11 @@ body{
 .titulo{
   margin:0 auto;
 }
-.salida{
+.psalida{
   font-weight: bold;
   font-size: 40px;
 }
-.ahorcado{
+.divAhorcado{
   height: 200px;
   width: 160px;
   background-image: url('./nvo_ahorcado-01.png');
